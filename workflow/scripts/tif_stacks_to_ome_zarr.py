@@ -129,3 +129,5 @@ with ProgressBar():
         axes=axes,
         metadata={"omero": omero},
     )
+
+group.attrs["omero"] = omero
