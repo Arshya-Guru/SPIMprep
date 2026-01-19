@@ -86,7 +86,7 @@ else:
     if Path(out_zarr).suffixes[-1] == ".zip":
         store = zarr.ZipStore(out_zarr, dimension_separator="/", mode="x")
     else:
-        store = out_zarr
+        store = zarr.DirectoryStore(out_zarr, dimension_separator="/")
 
 
 darr_list = []
